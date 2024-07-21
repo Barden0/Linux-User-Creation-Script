@@ -74,6 +74,6 @@ All actions and any errors are logged to /var/log/user_management.log.
 
 The password file is stored in /var/secure with permissions set to 600 to ensure only the root user can read it.
 Home directories are set to 700 permissions, ensuring only the user has access to their files.
-Contributing
 
+### Contributing
 Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
