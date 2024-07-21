@@ -36,49 +36,44 @@ Save the `create_users.sh` script in your preferred directory and make it execut
 
 ```chmod +x create_users.sh```
 
-3. Run the Script
+### 3. Run the Script
 Run the script with the input file as an argument:
 
 ```sudo ./create_users.sh users.txt```
 Replace users.txt with the name of your input file.
 
 
-Script Explanation
+### Script Explanation
 
-Arguments and File Checks
+#### Arguments and File Checks
 The script begins by checking if an input file is provided and if it exists. If not, it exits with an error message.
 
-Log and Password Files
+#### Log and Password Files
 The script creates and sets permissions for the log file (/var/log/user_management.log) and the password file (/var/secure/user_passwords.csv). The password file is secured so that only the root user can read it.
 
-Main Processing Loop
+#### Main Processing Loop
 The script reads the input file line by line, processes each user, and performs the following actions:
 
-User and Group Creation:
-
+#### User and Group Creation:
 Checks if the user already exists.
 Creates the user and their personal group.
 Sets up home directory permissions.
 Group Assignments:
 
-Assigns the user to additional groups.
+#### Assigns the user to additional groups.
 Creates groups if they do not exist.
 Password Generation:
 
-Generates a random password using openssl.
+#### Generates a random password using openssl.
 Sets the user's password.
 Stores the username and password in the secure file.
 Logging
 All actions and any errors are logged to /var/log/user_management.log.
 
-Security Considerations
+#### Security Considerations
 
 The password file is stored in /var/secure with permissions set to 600 to ensure only the root user can read it.
 Home directories are set to 700 permissions, ensuring only the user has access to their files.
 Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
-
-License
-
-This project is licensed under the MIT License.
