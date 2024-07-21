@@ -1,5 +1,3 @@
-# Linux-User-Creation-Script
-
 # User Creation Script
 
 This repository contains a bash script, `create_users.sh`, that automates the process of creating new user accounts on a Linux system. The script reads a list of usernames and group names from a text file, creates the users, assigns them to groups, sets up their home directories, generates random passwords, and logs all actions.
